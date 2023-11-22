@@ -1,0 +1,23 @@
+{
+    "name": "nwidart/core",
+    "description": "",
+    "authors": [
+        {
+            "name": "HoGoWeb",
+            "email": "huynhngocsuy@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Core\\": ""
+        }
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "private": true,
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build"
+    },
+    "devDependencies": {
+        "axios": "^1.1.2",
+        "laravel-vite-plugin": "^0.7.2",
+        "lodash": "^4.17.21",
+        "postcss": "^8.1.14",
+        "vite": "^4.0.0"
+    },
+    "dependencies": {
+        "ace": "^0.0.2",
+        "daterangepicker": "^3.1.0",
+        "jquery": "^3.7.0",
+        "jquery.uniform": "^2.2.2",
+        "lodash.difference": "^4.5.0",
+        "moment": "^2.29.4",
+        "picker": "^0.1.4",
+        "select2": "^4.1.0-rc.0",
+        "tinymce": "^6.6.2"
+    }
+}
