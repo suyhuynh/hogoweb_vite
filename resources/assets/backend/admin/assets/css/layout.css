@@ -182,8 +182,6 @@ body {
 .page-header-light {
   background-color: #fff;
   border-bottom: 1px solid #ddd; }
-  .page-header-light.has-cover {
-    background: url(../../../../../../global_assets/images/backgrounds/seamless.png); }
 
 .page-header-dark {
   background-color: #273246;
@@ -203,7 +201,6 @@ body {
   .page-header-dark .page-header-content .breadcrumb > .active {
     color: rgba(255, 255, 255, 0.5); }
   .page-header-dark.has-cover {
-    background: url(../../../../../../global_assets/images/login_cover.jpg);
     background-size: cover; }
 
 /* ------------------------------------------------------------------------------
@@ -1074,8 +1071,6 @@ body {
  *  Styles for main structure of content area in boxed layout
  *
  * ---------------------------------------------------------------------------- */
-.layout-boxed-bg {
-  background: url(../../../../../../global_assets/images/backgrounds/boxed_bg.png) repeat; }
 
 .layout-boxed {
   box-shadow: -4px 2px 4px rgba(0, 0, 0, 0.15), 4px 2px 4px rgba(0, 0, 0, 0.15); }
