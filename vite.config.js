@@ -2,12 +2,15 @@ import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
 
 export default defineConfig({
-    base: 'public/',
+    base: '',
     plugins: [
         laravel({
-            input: ['resources/css/app.css', 'resources/assets/backend/app.js'],
+            input: ['resources/assets/backend/scss/app.scss', 'resources/assets/backend/app.js'],
             refresh: true,
-            publicDir: 'public/'
+            publicDir: 'public/',
+            optimizeDeps: {
+                include: ['jQuery', '$'],
+            },
         }),
     ],
 });

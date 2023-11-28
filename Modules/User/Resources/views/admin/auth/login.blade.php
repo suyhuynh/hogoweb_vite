@@ -6,25 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Admin 4.0</title>
-    <link href="/public/admin/assets/css/erp.css" media="all" rel="stylesheet" type="text/css">
-    <link href="/public/admin/app/css/icons/icomoon/styles.min.css" media="all" rel="stylesheet" type="text/css">
-    <link href="/public/admin/assets/css/bootstrap.min.css"  media="all" rel="stylesheet" type="text/css">
-    <link href="/public/admin/assets/css/bootstrap_limitless.min.css" media="all" rel="stylesheet" type="text/css">
-    <link href="/public/admin/assets/css/layout.min.css" media="all" rel="stylesheet" type="text/css">
-    <link href="/public/admin/assets/css/components.min.css" media="all" rel="stylesheet" type="text/css">
-    <link href="/public/admin/assets/css/colors.min.css" media="all" rel="stylesheet" type="text/css">
-
-    <script src="/public/admin/app/js/main/jquery.min.js"></script>
-    <script src="/public/admin/app/js/main/bootstrap.bundle.min.js"></script>
-    <script src="/public/admin/app/js/plugins/loaders/blockui.min.js"></script>
-    <script src="/public/admin/app/js/plugins/forms/styling/uniform.min.js"></script>
-
-    <script src="/public/admin/assets/js/app.js"></script>
-    <script src="/public/admin/app/js/demo_pages/login.js"></script>
+    @vite(['resources/assets/backend/scss/app.scss', 'resources/assets/backend/app.js'])
 </head>
 <body>
     <div class="page-content">
-        <div class="content-wrapper" style="background: url('/public/admin/app/images/login_cover.jpg');    background-size: cover;">
+        <div class="content-wrapper" style="background: url('{{ asset("/admin/app/images/login_cover.jpg") }}');    background-size: cover;">
             <div class="content d-flex justify-content-center align-items-center">
                 <form class="login-form" action="{{ route('admin.login') }}" method="post">
                     {{ csrf_field() }}
