@@ -1,0 +1,89 @@
+.gulliver-box {
+  max-width: 746px;
+  margin: 0 auto;
+}
+
+.sex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.sex .form-check {
+  margin-right: 50px;
+}
+
+.register-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+.register-item .form-check {
+  width: calc(33.3333333333% - 16px);
+}
+.register-item .form-check .form-check-label {
+  width: auto;
+}
+.register-item.old .form-check:nth-child(2), .register-item.old .form-check:nth-child(5) {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.register-item.old .form-check:nth-child(3), .register-item.old .form-check:nth-child(6) {
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+}
+.register-item.job .form-check {
+  width: calc(23% - 16px);
+}
+.register-item.job .form-check:nth-child(1), .register-item.job .form-check:nth-child(2) {
+  width: calc(39% - 16px);
+}
+.register-item.job .form-check:nth-child(3) {
+  width: calc(22% - 16px);
+}
+.register-item.job .form-check:nth-child(4) {
+  width: calc(54% - 16px);
+}
+.register-item.program .form-check:nth-child(1), .register-item.program .form-check:nth-child(3) {
+  width: calc(75% - 16px);
+}
+.register-item.program .form-check:nth-child(3) .form-check-label {
+  width: 80%;
+}
+.register-item.program .form-check:nth-child(2), .register-item.program .form-check:nth-child(4) {
+  width: calc(25% - 16px);
+}
+
+.rules {
+  font-family: Inter;
+  font-size: 13px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: center;
+  margin-top: 16px;
+}
+.rules span {
+  color: #181A93;
+  font-weight: 700;
+  text-decoration-line: underline;
+}
+
+.btn-center {
+  text-align: center;
+}
+.btn-center .button-primary {
+  text-transform: none;
+  font-size: 20px;
+}

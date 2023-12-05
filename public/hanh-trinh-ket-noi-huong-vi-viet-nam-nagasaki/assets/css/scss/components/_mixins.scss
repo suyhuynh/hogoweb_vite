@@ -1,0 +1,27 @@
+/* ============================================================
+  Scale Image
+============================================================ */
+// input: (height / width) * 100
+// Output: class "image__wrapper"
+
+@mixin img-scale($height: "100%", $position: "50% 50%") {
+    .image__wrapper {
+        display: block;
+        overflow: hidden;
+        position: relative;
+        img {
+            position: absolute;
+            object-position: #{$position};
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        &::after {
+            content: "";
+            display: block;
+            padding-bottom: #{$height};
+        }
+    }
+  }

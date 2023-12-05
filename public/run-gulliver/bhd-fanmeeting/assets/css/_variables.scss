@@ -1,0 +1,188 @@
+/* ============================================================
+  Setting
+============================================================ */
+$primary-color: #201F1E;
+/* ============================================================
+  Font
+============================================================ */
+// @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200;12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&display=swap');
+
+@font-face {
+    font-family: 'Miama';
+    src: url('../font/Miama.eot');
+    src: url('../font/Miama.eot?#iefix') format('embedded-opentype'),
+        url('../font/Miama.woff2') format('woff2'),
+        url('../font/Miama.woff') format('woff'),
+        url('../font/Miama.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bricolage Grotesque 96pt';
+  src: url('../font/BricolageGrotesque-96ptExtraBold.woff2') format('woff2'),
+      url('../font/BricolageGrotesque-96ptExtraBold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  src: url('../font/BricolageGrotesque-ExtraBold.woff2') format('woff2'),
+      url('../font/BricolageGrotesque-ExtraBold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  src: url('../font/BricolageGrotesque-Bold.woff2') format('woff2'),
+      url('../font/BricolageGrotesque-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  src: url('../font/BricolageGrotesque-ExtraLight.woff2') format('woff2'),
+      url('../font/BricolageGrotesque-ExtraLight.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  src: url('../font/BricolageGrotesque-Regular.woff2') format('woff2'),
+      url('../font/BricolageGrotesque-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  src: url('../font/BricolageGrotesque-Medium.woff2') format('woff2'),
+      url('../font/BricolageGrotesque-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  src: url('../font/BricolageGrotesque-Light.woff2') format('woff2'),
+      url('../font/BricolageGrotesque-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  src: url('../font/BricolageGrotesque-SemiBold.woff2') format('woff2'),
+      url('../font/BricolageGrotesque-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+$fonts: (
+  "default": (
+    'Bricolage Grotesque',
+  ),
+  "miama": (
+    'Miama'
+  ),
+);
+
+@mixin font-family($font-family) {
+  $font: map-get($fonts, $font-family);
+  @if null != $font {
+    font-family: $font;
+  }
+}
+
+
+/* ============================================================
+  Break Point
+============================================================ */
+$bp-resize: (
+    "1280": 1280,
+    "1240": 1240,
+    "1100": 1100,
+    "1024": 1024,
+    "1000": 1000,
+    "960": 960,
+    "768": 768,
+    "720": 720,
+    "640": 640,
+    "600": 600,
+    "480": 480,
+    "375": 375,
+    "320": 320,
+);
+
+@mixin media($media-width, $option: "min") {
+    @if "number"==type-of($media-width) {
+        @if "min"==$option {
+            $media-width: $media-width + 1;
+
+            @media screen and (min-width: #{$media-width}px) {
+                @content;
+            }
+        }
+
+        @else if "max"==$option {
+            @media screen and (max-width: #{$media-width}px) {
+                @content;
+            }
+        }
+    }
+
+    @else if "string"==type-of($media-width) {
+        @if 1==str-index($media-width, "bp") {
+            $bp-width: map-get($bp-resize, str-slice($media-width, 4, -1));
+
+            @if null !=$bp-width {
+                @media screen and (max-width: #{$bp-width}px) {
+                    @content;
+                }
+            }
+        }
+
+        @else if 1==str-index($media-width, "mbp") {
+            $bp-width: map-get($bp-resize, str-slice($media-width, 5, -1)) + 1;
+
+            @if null !=$bp-width {
+                @media screen and (min-width: #{$bp-width}px) {
+                    @content;
+                }
+            }
+        }
+    }
+}
+
+/* ============================================================
+  Font Size
+============================================================ */
+$font-default: 16;
+
+@mixin font-size($font-size) {
+    font-size: #{$font-size}px;
+}
+
+/* ============================================================
+  Font Weight
+============================================================ */
+$fontW-default: 400;
+
+@mixin font-weight($fontW-default) {
+    font-weight: #{$fontW-default};
+}

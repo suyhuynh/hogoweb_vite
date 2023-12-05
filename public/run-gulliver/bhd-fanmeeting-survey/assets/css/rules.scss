@@ -1,0 +1,106 @@
+@import "variables";
+
+.rules-page {
+    padding: 0 30px 40px;
+    .wrap-mb {
+        display: none;
+    }
+    .wrap-pc {
+        display: block;
+    }
+    @include media(768, 'max') {
+        padding: 0 16px 40px;
+        .wrap-mb {
+            display: block;
+        }
+        .wrap-pc {
+            display: none;
+        }
+    }
+    .rules-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h2 {
+            max-width: 768px;
+            color: $secondary_color;
+        }
+    }
+    .rules-content {
+        .cotent-item {
+            margin-bottom: 40px;
+        }
+        .sub-title {
+            color: $secondary_color;
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            @include media(992, 'max') {
+                font-size: 22px;
+            }
+            @include media(560, 'max') {
+                font-size: 20px;
+            }
+        }
+        p, b, a {
+            font-size: 20px;
+            line-height: 28px;
+            margin-bottom: 0;
+            &:not(:last-child) {
+                margin-bottom: 8px;
+                @include media(560, 'max') {
+                    margin-bottom: 16px;
+                }
+            }
+            @include media(992, 'max') {
+                font-size: 18px;
+                line-height: 24px;
+            }
+            @include media(560, 'max') {
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+        a {
+            color: $bg_btn;
+            font-weight: 700;
+            white-space: pre-wrap;
+            white-space: -moz-pre-wrap;
+            white-space: -pre-wrap;
+            white-space: -o-pre-wrap;
+            word-wrap: break-word;
+        }
+        ul {
+            list-style: disc;
+        }
+        ol {
+            list-style: decimal;
+        }
+        ul, ol {
+            padding-left: 32px;
+            margin-bottom: 0;
+            @include media(992, 'max') {
+                padding-left: 24px;
+            }
+            &:not(:last-child) {
+                margin-bottom: 24px;
+                @include media(560, 'max') {
+                    margin-bottom: 16px;
+                }
+            }
+            li {
+                margin-bottom: 4px;
+                font-size: 20px;
+                line-height: 28px;
+                @include media(992, 'max') {
+                    font-size: 18px;
+                    line-height: 24px;
+                }
+                @include media(560, 'max') {
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+}

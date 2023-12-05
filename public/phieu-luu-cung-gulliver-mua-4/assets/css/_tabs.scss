@@ -1,0 +1,139 @@
+// .background{
+//     background: url('../images/bg.png') no-repeat;
+//     background-size: cover;
+// }
+.tabs{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+
+    @include media(600, "max"){
+        gap: 4px;
+    }
+}
+
+.tab{
+    width: calc(100%/2 - 10px);
+    text-align: center;
+
+    @include media(767, "max"){
+        &:last-child{
+            text-align: left;
+        }
+    }
+
+    @include media(600, "max"){
+        width: auto;
+    }
+
+    &.is-active{
+        .tab-link{
+            color: #282F78;
+            &:before{
+                background: #282F78;
+            }
+            &:after{
+                border-top: solid #282F78 9px;
+                @include media(600, "max"){
+                    border-top: solid #282F78 8px;
+                }
+            }
+        }
+    }
+}
+
+.tab-link{
+    font-size: 40px;
+    text-decoration: none;
+    color: #A19F9D;
+    font-size: 40px;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative;
+    padding: 0 12px;
+
+    @include media(991, "max"){
+        font-size: 34px;
+    }
+    @include media(767, "max"){
+        font-size: 24px;
+    }
+    @include media(600, "max"){
+        font-size: 20px;
+        font-weight: 400;
+        padding: 0 6px;
+    }
+
+    &:before, &:after{
+        content: "";
+        position: absolute;
+    }
+    
+    &:before {
+        height: 6px;
+        border-radius: 2px;
+        background: #A19F9D;
+        bottom: -8px;
+        left: 0;
+        width: 100%;
+        @include media(600, "max"){
+            height: 2px;
+            bottom: -4px;
+        }
+    }
+    &:after{
+        border-left: solid transparent 9px;
+        border-right: solid transparent 9px;
+        border-top: solid transparent 9px;
+        left: 50%;
+        bottom: -17px;
+        height: 0;
+        z-index: 6;
+        transform: translateX(-50%);
+        @include media(600, "max"){
+            border-left: solid transparent 10px;
+            border-right: solid transparent 10px;
+            border-top: solid transparent 8px;
+            bottom: -12px;
+        }
+    }
+}
+
+.tab-content{
+    display: none;
+    margin-top: 50px;
+    border-radius: 24px;
+    border: 2px solid #FFF;
+    background: rgba(255, 255, 255, 0.60);
+    backdrop-filter: blur(8px);
+    @include media(600, "max"){
+        margin-top: 24px;
+    }
+    &.is-active{
+        display: block;
+    }
+
+    h2{
+        color: #282F78;
+        text-align: center;
+        font-size: 40px;
+        font-weight: 600;
+        margin: 40px 0 48px;
+        @include media(991, "max"){
+            font-size: 34px;
+        }
+        @include media(767, "max"){
+            font-size: 30px;
+        }
+        @include media(600, "max"){
+            font-size: 24px;
+            margin: 40px 0 36px;
+        }
+    }
+}
+
+.form-label{
+    color: #181A93;
+    font-size: 24px;
+    font-weight: 600;
+}

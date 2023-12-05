@@ -11,6 +11,22 @@
 |
 */
 
+Route::get('/', 'AdminController@index')->name('admin.dashboard.index');
+
+Route::group(['prefix' => 'config', 'as' => 'admin.config.'], function () {
+    Route::get('{key?}', [
+        'as' => 'index',
+        'uses' => 'ConfigController@index',
+        'middleware' => 'can:admin.config.index',
+    ]);
+
+    Route::post('{key}', [
+        'as' => 'store',
+        'uses' => 'ConfigController@store',
+        'middleware' => 'can:admin.config.index',
+    ]);
+});
+
 Route::prefix('categories/{code}')->group(function() {
 	Route::get('', 'CategoryController@index')->name('admin.categories.index');
 	Route::post('', [

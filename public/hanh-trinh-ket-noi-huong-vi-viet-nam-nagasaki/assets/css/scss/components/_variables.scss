@@ -1,0 +1,195 @@
+/* ============================================================
+  Font Family
+============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap');
+
+
+@font-face {
+  font-family: 'Anek Latin';
+  src: url('/hanh-trinh-ket-noi-huong-vi-viet-nam-nagasaki/assets/font/AnekLatin-ExtraBold.eot');
+  src: url('/hanh-trinh-ket-noi-huong-vi-viet-nam-nagasaki/assets/font/AnekLatin-ExtraBold.eot?#iefix') format('embedded-opentype'),
+      url('/hanh-trinh-ket-noi-huong-vi-viet-nam-nagasaki/assets/font/AnekLatin-ExtraBold.woff2') format('woff2'),
+      url('/hanh-trinh-ket-noi-huong-vi-viet-nam-nagasaki/assets/font/AnekLatin-ExtraBold.woff') format('woff'),
+      url('/hanh-trinh-ket-noi-huong-vi-viet-nam-nagasaki/assets/font/AnekLatin-ExtraBold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Anek Latin';
+  src: url('/hanh-trinh-ket-noi-huong-vi-viet-nam-nagasaki/assets/font/AnekLatin-Bold.eot');
+  src: url('/hanh-trinh-ket-noi-huong-vi-viet-nam-nagasaki/assets/font/AnekLatin-Bold.eot?#iefix') format('embedded-opentype'),
+      url('/hanh-trinh-ket-noi-huong-vi-viet-nam-nagasaki/assets/font/AnekLatin-Bold.woff2') format('woff2'),
+      url('/hanh-trinh-ket-noi-huong-vi-viet-nam-nagasaki/assets/font/AnekLatin-Bold.woff') format('woff'),
+      url('/hanh-trinh-ket-noi-huong-vi-viet-nam-nagasaki/assets/font/AnekLatin-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Anek Latin';
+  src: url('/hanh-trinh-ket-noi-huong-vi-viet-nam-nagasaki/assets/font/AnekLatin-ExtraLight.eot');
+  src: url('/hanh-trinh-ket-noi-huong-vi-viet-nam-nagasaki/assets/font/AnekLatin-ExtraLight.eot?#iefix') format('embedded-opentype'),
+      url('/hanh-trinh-ket-noi-huong-vi-viet-nam-nagasaki/assets/font/AnekLatin-ExtraLight.woff2') format('woff2'),
+      url('/hanh-trinh-ket-noi-huong-vi-viet-nam-nagasaki/assets/font/AnekLatin-ExtraLight.woff') format('woff'),
+      url('/hanh-trinh-ket-noi-huong-vi-viet-nam-nagasaki/assets/font/AnekLatin-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Anek Latin';
+  src: url('/hanh-trinh-ket-noi-huong-vi-viet-nam-nagasaki/assets/font/AnekLatin-Thin.eot');
+  src: url('/hanh-trinh-ket-noi-huong-vi-viet-nam-nagasaki/assets/font/AnekLatin-Thin.eot?#iefix') format('embedded-opentype'),
+      url('/hanh-trinh-ket-noi-huong-vi-viet-nam-nagasaki/assets/font/AnekLatin-Thin.woff2') format('woff2'),
+      url('/hanh-trinh-ket-noi-huong-vi-viet-nam-nagasaki/assets/font/AnekLatin-Thin.woff') format('woff'),
+      url('/hanh-trinh-ket-noi-huong-vi-viet-nam-nagasaki/assets/font/AnekLatin-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Anek Latin';
+  src: url('/hanh-trinh-ket-noi-huong-vi-viet-nam-nagasaki/assets/font/AnekLatin-SemiBold.eot');
+  src: url('/hanh-trinh-ket-noi-huong-vi-viet-nam-nagasaki/assets/font/AnekLatin-SemiBold.eot?#iefix') format('embedded-opentype'),
+      url('/hanh-trinh-ket-noi-huong-vi-viet-nam-nagasaki/assets/font/AnekLatin-SemiBold.woff2') format('woff2'),
+      url('/hanh-trinh-ket-noi-huong-vi-viet-nam-nagasaki/assets/font/AnekLatin-SemiBold.woff') format('woff'),
+      url('/hanh-trinh-ket-noi-huong-vi-viet-nam-nagasaki/assets/font/AnekLatin-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Anek Latin';
+  src: url('/hanh-trinh-ket-noi-huong-vi-viet-nam-nagasaki/assets/font/AnekLatin-Regular.eot');
+  src: url('/hanh-trinh-ket-noi-huong-vi-viet-nam-nagasaki/assets/font/AnekLatin-Regular.eot?#iefix') format('embedded-opentype'),
+      url('/hanh-trinh-ket-noi-huong-vi-viet-nam-nagasaki/assets/font/AnekLatin-Regular.woff2') format('woff2'),
+      url('/hanh-trinh-ket-noi-huong-vi-viet-nam-nagasaki/assets/font/AnekLatin-Regular.woff') format('woff'),
+      url('/hanh-trinh-ket-noi-huong-vi-viet-nam-nagasaki/assets/font/AnekLatin-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Anek Latin';
+  src: url('/hanh-trinh-ket-noi-huong-vi-viet-nam-nagasaki/assets/font/AnekLatin-Medium.eot');
+  src: url('/hanh-trinh-ket-noi-huong-vi-viet-nam-nagasaki/assets/font/AnekLatin-Medium.eot?#iefix') format('embedded-opentype'),
+      url('/hanh-trinh-ket-noi-huong-vi-viet-nam-nagasaki/assets/font/AnekLatin-Medium.woff2') format('woff2'),
+      url('/hanh-trinh-ket-noi-huong-vi-viet-nam-nagasaki/assets/font/AnekLatin-Medium.woff') format('woff'),
+      url('/hanh-trinh-ket-noi-huong-vi-viet-nam-nagasaki/assets/font/AnekLatin-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Anek Latin';
+  src: url('/hanh-trinh-ket-noi-huong-vi-viet-nam-nagasaki/assets/font/AnekLatin-Light.eot');
+  src: url('/hanh-trinh-ket-noi-huong-vi-viet-nam-nagasaki/assets/font/AnekLatin-Light.eot?#iefix') format('embedded-opentype'),
+      url('/hanh-trinh-ket-noi-huong-vi-viet-nam-nagasaki/assets/font/AnekLatin-Light.woff2') format('woff2'),
+      url('/hanh-trinh-ket-noi-huong-vi-viet-nam-nagasaki/assets/font/AnekLatin-Light.woff') format('woff'),
+      url('/hanh-trinh-ket-noi-huong-vi-viet-nam-nagasaki/assets/font/AnekLatin-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+$fonts: (
+  "default": (
+    'Anek Latin',
+  ),
+  "unbounded": (
+    'Unbounded'
+  ),
+);
+
+$home_url: '/phieu-luu-cung-gulliver-mua-4/';
+$data_url: $home_url + 'assets/';
+$primary_font: 'Plus Jakarta Sans', sans-serif;
+$hightlight_font: 'Rowdies', sans-serif;
+$hightlight_color: #424FC8;
+$primary_color: #323130;
+$bg_btn: #E02B00;
+$secondary_color: #04264C;
+
+@mixin font-family($font-family) {
+  $font: map-get($fonts, $font-family);
+  @if null != $font {
+    font-family: $font;
+  }
+}
+/* ============================================================
+  Break Point
+============================================================ */
+$bp-resize: (
+  "1280": 1280,
+  "1240": 1240,
+  "1100": 1100,
+  "1024": 1024,
+  "1000": 1000,
+  "960": 960,
+  "768": 768,
+  "720": 720,
+  "640": 640,
+  "600": 600,
+  "480": 480,
+  "375": 375,
+  "320": 320,
+);
+
+@mixin media($media-width, $option: "min") {
+  @if "number" == type-of($media-width) {
+    @if "min" == $option{
+      $media-width: $media-width + 1;
+      @media screen and (min-width: #{$media-width}px) {
+        @content;
+      }
+    } @else if "max" == $option {
+      @media screen and (max-width: #{$media-width}px) {
+        @content;
+      }
+    }
+  } @else if "string" == type-of($media-width) {
+    @if 1 == str-index($media-width, "bp") {
+      $bp-width: map-get($bp-resize, str-slice($media-width, 4, -1));
+      @if null != $bp-width {
+        @media screen and (max-width: #{$bp-width}px) {
+          @content;
+        }
+      }
+    } @else if 1 == str-index($media-width, "mbp") {
+      $bp-width: map-get($bp-resize, str-slice($media-width, 5, -1)) + 1;
+      @if null != $bp-width {
+        @media screen and (min-width: #{$bp-width}px) {
+          @content;
+        }
+      }
+    }
+  }
+}
+
+/* ============================================================
+  Font Size
+============================================================ */
+$font-default: 16;
+
+@mixin font-size($font-size) {
+    font-size: #{$font-size}px;
+}
+
+/* ============================================================
+  Font Weight
+============================================================ */
+$fontW-default: 400;
+
+@mixin font-weight($fontW-default) {
+    font-weight: #{$fontW-default};
+}
