@@ -27,7 +27,15 @@ class AuthController extends Controller
             request()->request->add(['username' => request()->email]);
             request()->except(['email']);
         }
+
         return $text;
+    }
+
+    public function logout(Request $request)
+    {
+        $this->guard()->logout();
+        remove_session_user_login();
+        return $this->loggedOut($request) ?: redirect()->route('admin.login');
     }
 
     // public function login(LoginRequest $request)

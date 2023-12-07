@@ -11,8 +11,7 @@
 |
 */
 Route::get('login', 'AuthController@getLogin')->name('admin.login');
-Route::post('login', 'AuthController@login')->name('admin.login');
-Route::post('login', 'AuthController@login')->name('login');
+Route::post('login', 'AuthController@login')->name('admin.post_login');
 Route::get('logout', 'AuthController@logout')->name('admin.logout');
 Route::prefix('users')->group(function() {
 	Route::get('/', [

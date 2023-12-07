@@ -4,17 +4,18 @@ namespace Modules\User\Entities;
 
 use Cartalyst\Sentinel\Laravel\Facades\Activation;
 use Illuminate\Auth\Authenticatable;
-use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
-use Illuminate\Support\Facades\Cache;
-use Illuminate\Database\Eloquent\Model;
 use Modules\User\Entities\Position;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Foundation\Auth\User as FoundationAuthenticatable;
+use Illuminate\Notifications\Notifiable;
+use Laravel\Sanctum\HasApiTokens;
 use Modules\User\Entities\Department;
-use Modules\App\Entities\AppModel;
 use Modules\Core\Entities\Setting;
 use Modules\User\Admin\UserTable;
 
-class User extends AppModel{
-    use Authenticatable;
+class User extends FoundationAuthenticatable{
+    
+    use HasApiTokens, HasFactory, Notifiable, Authenticatable;
     protected $module = 'user';
     protected $fillable = [
         'parent_id',

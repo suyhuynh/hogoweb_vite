@@ -4,7 +4,7 @@ namespace Modules\User\Entities;
 
 use Modules\Admin\Ui\AdminTable;
 use Modules\User\Repositories\Permission;
-use Modules\App\Entities\AppModel;
+use Modules\Core\Entities\AppModel;
 class Role extends AppModel
 {
     protected $fillable = array(

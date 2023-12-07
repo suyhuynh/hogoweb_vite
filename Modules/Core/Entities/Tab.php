@@ -2,7 +2,7 @@
 
 namespace Modules\Core\Entities;
 
-use Modules\App\Entities\AppModel;
+use Modules\Core\Entities\AppModel;
 use Modules\Website\Entities\PostContent;
 use Modules\Product\Entities\ProductContent;
 use Illuminate\Database\Eloquent\Builder;
