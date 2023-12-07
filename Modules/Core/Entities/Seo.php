@@ -3,7 +3,7 @@
 namespace Modules\Core\Entities;
 
 use Illuminate\Database\Eloquent\Model;
-use Modules\App\Entities\AppModel;
+use Modules\Core\Entities\AppModel;
 use Illuminate\Database\Eloquent\Builder;
 use Modules\Question\Entities\QuestionAnswer;
 use DB;

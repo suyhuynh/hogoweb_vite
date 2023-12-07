@@ -4,7 +4,7 @@ namespace Modules\User\Entities;
 
 use Illuminate\Database\Eloquent\Model;
 use Modules\User\Admin\DepartmentTable;
-use Modules\App\Entities\AppModel;
+use Modules\Core\Entities\AppModel;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 class Department extends AppModel

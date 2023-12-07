@@ -2,7 +2,7 @@
 
 namespace Modules\Core\Entities;
 
-use Modules\App\Entities\AppModel;
+use Modules\Core\Entities\AppModel;
 
 class CategoryTranslate extends AppModel
 {

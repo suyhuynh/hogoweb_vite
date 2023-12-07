@@ -12,7 +12,7 @@
     <div class="page-content">
         <div class="content-wrapper" style="background: url('{{ asset("/admin/app/images/login_cover.jpg") }}');    background-size: cover;">
             <div class="content d-flex justify-content-center align-items-center">
-                <form class="login-form" action="{{ route('admin.login') }}" method="post">
+                <form class="login-form" action="{{ route('admin.post_login') }}" method="post">
                     {{ csrf_field() }}
                     <div class="card mb-0">
                         <div class="card-body">
