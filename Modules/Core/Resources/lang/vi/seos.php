@@ -1,0 +1,23 @@
+<?php
+return [
+	'title' => 'Tiêu đề SEO',
+	'description' => 'Mô tả SEO',
+	'keyword' => 'Từ khóa',
+	'show' => 'Hiện thị',
+	'img' => 'Ảnh SEO',
+	'avatar' => 'Thumbnail',
+	'status' => 'Không xuất hiện trên các công cụ tìm kiếm',
+	'title_note' => 'Tiêu đề SEO của bạn có độ dài ký tự không vược quá Max 60 ký tự',
+	'description_note' => 'Mô tả SEO của bạn có độ dài ký tự không vược quá Max 180 ký tự',
+	'keyword_note' => 'Từ khóa SEO phải cách nhau bằng dấu <strong>","</strong> có dấu và không dấu</span>',
+	'url_note' => 'URL không được trùng nhau và dễ hiểu',
+	'url' => 'URL',
+	'seo' => 'Tối ưu hoá bộ máy tìm kiếm (SEO)',
+	'alert_url' => 'Chỉnh sửa URL',
+	'alert_url_error' => 'URL đã tồn tại trong hệ thống vui lòng nhập lại',
+	'alert_url_success' => 'URL hợp lệ',
+	'alert_seo' => 'Chỉnh sửa nội dung SEO',
+	'published_at' => 'Ngày đăng',
+	'gallery' => 'Thư viện hình ảnh',
+	'seo_note' => 'Thiết lập các thẻ mô tả giúp người dùng dễ dàng tìm thấy trên công cụ tìm kiếm như Google.',
+];

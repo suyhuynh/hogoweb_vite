@@ -20,7 +20,6 @@ class AdminController extends Controller
      */
     public function index()
     {
-        set_session_user_login(auth()->user());
         return view('core::dashboard', [
             'dataModules' => $this->getTotalRowByModule()
         ]);
@@ -28,29 +27,29 @@ class AdminController extends Controller
 
     private function getTotalRowByModule() {
         $data = [];
-        $configModule = Config::where('type', 'module')->first();
+        // $configModule = Config::where('type', 'module')->first();
         
-        if (in_array('Page', $configModule->config)) {
-            $data['page'] = \Modules\Page\Entities\Page::whereHas('translates', function($q){
-                return $q->where('lang_code', currentLanguageCode());
-            })->count();
-        }
+        // if (in_array('Page', $configModule->config)) {
+        //     $data['page'] = \Modules\Page\Entities\Page::whereHas('translates', function($q){
+        //         return $q->where('lang_code', currentLanguageCode());
+        //     })->count();
+        // }
 
-        if (in_array('Post', $configModule->config)) {
-            $data['post'] = \Modules\Post\Entities\Post::whereHas('translates', function($q){
-                return $q->where('lang_code', currentLanguageCode());
-            })->count();
+        // if (in_array('Post', $configModule->config)) {
+        //     $data['post'] = \Modules\Post\Entities\Post::whereHas('translates', function($q){
+        //         return $q->where('lang_code', currentLanguageCode());
+        //     })->count();
 
-            if (in_array('Core', $configModule->config)) {
-                $data['post_category'] = \Modules\Core\Entities\Category::whereHas('translates', function($q){
-                    return $q->where('lang_code', currentLanguageCode());
-                })->count();
-            }
-        }
+        //     if (in_array('Core', $configModule->config)) {
+        //         $data['post_category'] = \Modules\Core\Entities\Category::whereHas('translates', function($q){
+        //             return $q->where('lang_code', currentLanguageCode());
+        //         })->count();
+        //     }
+        // }
 
-        if (in_array('Contact', $configModule->config)) {
-            $data['contact'] = \Modules\Contact\Entities\Contact::count();
-        }
+        // if (in_array('Contact', $configModule->config)) {
+        //     $data['contact'] = \Modules\Contact\Entities\Contact::count();
+        // }
 
         return $data;
     }

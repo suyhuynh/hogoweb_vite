@@ -1,0 +1,23 @@
+<?php
+return [
+    'title' => 'Seo title',
+    'description' => 'Seo description',
+    'keyword' => 'Keyword',
+    'show' => 'Show',
+    'img' => 'SEO Image',
+    'avatar' => 'Avatar',
+    'status' => 'Not visible to search engines',
+    'title_note' => 'Your SEO title must not exceed Max 60 characters in length',
+    'description_note' => 'Your SEO description must not exceed Max 180 characters in length',
+    'keyword_note' => 'SEO keywords must be separated by <strong>","</strong> with and without accents</span>',
+    'url_note' => 'URL should not be duplicated and understandable',
+    'url' => 'URL',
+    'seo' => 'Search Engine Optimization (SEO)',
+    'alert_url' => 'Edit URL',
+    'alert_url_error' => 'URL already exists in the system, please re-enter',
+    'alert_url_success' => 'valid URL',
+    'alert_seo' => 'Edit seo content',
+    'published_at' => 'Published date',
+    'gallery' => 'Gallery',
+    'seo_note' => 'Set up description tags to make it easy for users to find on search engines like Google.',
+];

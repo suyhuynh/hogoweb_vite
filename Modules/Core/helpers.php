@@ -149,7 +149,7 @@ if (! function_exists('check_language')) {
     }
 }
 
-if (! function_exists('get_sort_config')) {
+if (! function_exists('get_sort_product_config')) {
     function get_sort_product_config()
     {
         $data = \Modules\Core\Entities\Setting::where('type', 'product')->first();
