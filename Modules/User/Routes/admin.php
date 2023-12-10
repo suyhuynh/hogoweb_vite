@@ -13,249 +13,230 @@
 Route::get('login', 'AuthController@getLogin')->name('admin.login');
 Route::post('login', 'AuthController@login')->name('admin.post_login');
 Route::get('logout', 'AuthController@logout')->name('admin.logout');
-Route::prefix('users')->group(function() {
-	Route::get('/', [
-		'as' => 'admin.users.index',
+
+Route::group(['prefix' => 'users', 'as' => 'admin.users.'], function () {
+	Route::get('', [
+		'as' => 'index',
 		'uses' => 'UserController@index',
 		'middleware' => 'can:admin.users.index',
 	]);
-	Route::post('/', [
-		'as' => 'admin.users.index',
-		'uses' => 'UserController@table',
-		'middleware' => 'can:admin.users.index',
-	]);
 	Route::get('create', [
-		'as' => 'admin.users.create',
+		'as' => 'create',
 		'uses' => 'UserController@create',
 		'middleware' => 'can:admin.users.create',
 	]);
 
 	Route::post('user', [
-		'as' => 'admin.users.store',
+		'as' => 'store',
 		'uses' => 'UserController@store',
 		'middleware' => 'can:admin.users.create',
 	]);
 
 	Route::get('edit/{id}', [
-		'as' => 'admin.users.edit',
+		'as' => 'edit',
 		'uses' => 'UserController@edit',
 		'middleware' => 'can:admin.users.edit',
 	]);
 
 	Route::post('update/{id}', [
-		'as' => 'admin.users.update',
+		'as' => 'update',
 		'uses' => 'UserController@update',
 		'middleware' => 'can:admin.users.edit',
 	]);
 
 	Route::post('destroys', [
-		'as' => 'admin.users.destroy',
+		'as' => 'destroy',
 		'uses' => 'UserController@destroy',
 		'middleware' => 'can:admin.users.destroy',
 	]);
 
 	Route::get('{id}/show', [
-		'as' => 'admin.users.show',
+		'as' => 'show',
 		'uses' => 'UserController@show',
 		'middleware' => 'can:admin.users.show',
 	]);
 
 	Route::post('status', [
-		'as' => 'admin.users.status',
+		'as' => 'status',
 		'uses' => 'UserController@status',
 		'middleware' => 'can:admin.users.create',
 	]);
 
 	Route::get('{id}/change-password', [
-		'as' => 'admin.users.change_password',
+		'as' => 'change_password',
 		'uses' => 'UserController@changePass'
 	]);
 
 	Route::post('{id}/change-password', [
-		'as' => 'admin.users.change_password',
+		'as' => 'post_change_password',
 		'uses' => 'UserController@savePass'
 	]);
 });
 
-Route::prefix('account')->group(function() {
+Route::group(['prefix' => 'account', 'as' => 'admin.account.'], function () {
 	Route::get('profile', [
-		'as' => 'admin.account.profile',
+		'as' => 'profile',
 		'uses' => 'AccountController@profile',
 	]);
 
 	Route::post('profile', [
-		'as' => 'admin.account.profile',
+		'as' => 'post_profile',
 		'uses' => 'AccountController@updateProfile',
 	]);
 
 	Route::get('change-password', [
-		'as' => 'admin.account.change_password',
+		'as' => 'change_password',
 		'uses' => 'AccountController@changePassword',
 	]);
 
 	Route::post('change-password', [
-		'as' => 'admin.account.change_password',
+		'as' => 'post_change_password',
 		'uses' => 'AccountController@updatePassword',
 	]);
 });
 
-Route::prefix('role')->group(function() {
+Route::group(['prefix' => 'role', 'as' => 'admin.roles.'], function () {
 	Route::get('/', [
-		'as' => 'admin.roles.index',
+		'as' => 'index',
 		'uses' => 'RoleController@index',
 		'middleware' => 'can:admin.roles.index',
 	]);
-	Route::post('/', [
-		'as' => 'admin.roles.index',
-		'uses' => 'RoleController@table',
-		'middleware' => 'can:admin.roles.index',
-	]);
 	Route::get('create', [
-		'as' => 'admin.roles.create',
+		'as' => 'create',
 		'uses' => 'RoleController@create',
 		'middleware' => 'can:admin.roles.create',
 	]);
 
 	Route::post('store', [
-		'as' => 'admin.roles.store',
+		'as' => 'store',
 		'uses' => 'RoleController@store',
 		'middleware' => 'can:admin.roles.create',
 	]);
 
 	Route::get('edit/{id}', [
-		'as' => 'admin.roles.edit',
+		'as' => 'edit',
 		'uses' => 'RoleController@edit',
 		'middleware' => 'can:admin.roles.edit',
 	]);
 
 	Route::post('status', [
-		'as' => 'admin.roles.status',
+		'as' => 'status',
 		'uses' => 'RoleController@status',
 		'middleware' => 'can:admin.roles.create',
 	]);
 
 	Route::post('update/{id}', [
-		'as' => 'admin.roles.update',
+		'as' => 'update',
 		'uses' => 'RoleController@update',
 		'middleware' => 'can:admin.roles.edit',
 	]);
 
 	Route::post('destroy', [
-		'as' => 'admin.roles.destroy',
+		'as' => 'destroy',
 		'uses' => 'RoleController@destroy',
 		'middleware' => 'can:admin.roles.destroy',
 	]);
 
 	Route::get('{id}/show', [
-		'as' => 'admin.roles.show',
+		'as' => 'show',
 		'uses' => 'RoleController@show',
 		'middleware' => 'can:admin.roles.show',
 	]);
 });
 
-Route::prefix('departments')->group(function() {
+Route::group(['prefix' => 'departments', 'as' => 'admin.departments.'], function () {
 	Route::get('/', [
-		'as' => 'admin.departments.index',
+		'as' => 'index',
 		'uses' => 'DepartmentController@index',
 		'middleware' => 'can:admin.departments.index',
 	]);
-	Route::post('/', [
-		'as' => 'admin.departments.index',
-		'uses' => 'DepartmentController@table',
-		'middleware' => 'can:admin.departments.index',
-	]);
 	Route::get('create', [
-		'as' => 'admin.departments.create',
+		'as' => 'create',
 		'uses' => 'DepartmentController@create',
 		'middleware' => 'can:admin.departments.create',
 	]);
 
 	Route::post('store', [
-		'as' => 'admin.departments.store',
+		'as' => 'store',
 		'uses' => 'DepartmentController@store',
 		'middleware' => 'can:admin.departments.create',
 	]);
 
 	Route::get('edit/{id}', [
-		'as' => 'admin.departments.edit',
+		'as' => 'edit',
 		'uses' => 'DepartmentController@edit',
 		'middleware' => 'can:admin.departments.edit',
 	]);
 
 	Route::post('status', [
-		'as' => 'admin.departments.status',
+		'as' => 'status',
 		'uses' => 'DepartmentController@status',
 		'middleware' => 'can:admin.departments.create',
 	]);
 
 	Route::post('update/{id}', [
-		'as' => 'admin.departments.update',
+		'as' => 'update',
 		'uses' => 'DepartmentController@update',
 		'middleware' => 'can:admin.departments.edit',
 	]);
 
 	Route::post('destroy', [
-		'as' => 'admin.departments.destroy',
+		'as' => 'destroy',
 		'uses' => 'DepartmentController@destroy',
 		'middleware' => 'can:admin.departments.destroy',
 	]);
 
 	Route::get('{id}/show', [
-		'as' => 'admin.departments.show',
+		'as' => 'show',
 		'uses' => 'DepartmentController@show',
 		'middleware' => 'can:admin.departments.show',
 	]);
 });
 
-Route::prefix('positions')->group(function() {
+Route::group(['prefix' => 'positions', 'as' => 'admin.positions.'], function () {
 	Route::get('/', [
-		'as' => 'admin.positions.index',
+		'as' => 'index',
 		'uses' => 'PositionController@index',
 		'middleware' => 'can:admin.positions.index',
 	]);
-	Route::post('/', [
-		'as' => 'admin.positions.index',
-		'uses' => 'PositionController@table',
-		'middleware' => 'can:admin.positions.index',
-	]);
 	Route::get('create', [
-		'as' => 'admin.positions.create',
+		'as' => 'create',
 		'uses' => 'PositionController@create',
 		'middleware' => 'can:admin.positions.create',
 	]);
 
 	Route::post('store', [
-		'as' => 'admin.positions.store',
+		'as' => 'store',
 		'uses' => 'PositionController@store',
 		'middleware' => 'can:admin.positions.create',
 	]);
 
 	Route::get('edit/{id}', [
-		'as' => 'admin.positions.edit',
+		'as' => 'edit',
 		'uses' => 'PositionController@edit',
 		'middleware' => 'can:admin.positions.edit',
 	]);
 
 	Route::post('status', [
-		'as' => 'admin.positions.status',
+		'as' => 'status',
 		'uses' => 'PositionController@status',
 		'middleware' => 'can:admin.positions.create',
 	]);
 
 	Route::post('update/{id}', [
-		'as' => 'admin.positions.update',
+		'as' => 'update',
 		'uses' => 'PositionController@update',
 		'middleware' => 'can:admin.positions.edit',
 	]);
 
 	Route::post('destroy', [
-		'as' => 'admin.positions.destroy',
+		'as' => 'destroy',
 		'uses' => 'PositionController@destroy',
 		'middleware' => 'can:admin.positions.destroy',
 	]);
 
 	Route::get('{id}/show', [
-		'as' => 'admin.positions.show',
+		'as' => 'show',
 		'uses' => 'PositionController@show',
 		'middleware' => 'can:admin.positions.show',
 	]);

@@ -194,7 +194,7 @@
             <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="position: absolute;z-index: 1;right: 15px;top: 15px;">
                 <span aria-hidden="true">&times;</span>
             </button>
-            @include('media::admin.list', ['modal' => true])
+            {{-- @include('media::admin.list', ['modal' => true]) --}}
         </div>
     </div>
 </div>
