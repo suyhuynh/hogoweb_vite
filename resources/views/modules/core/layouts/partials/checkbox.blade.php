@@ -1,0 +1,1 @@
+<input type="checkbox" class="form-input-styled select-row" value="{{ $entity->id }}" id="checkbox{{ $entity->id }}">

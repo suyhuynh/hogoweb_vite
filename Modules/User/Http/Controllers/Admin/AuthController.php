@@ -3,11 +3,8 @@
 namespace Modules\User\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
 use Illuminate\Routing\Controller;
-use Modules\User\Http\Requests\Auth\LoginRequest;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
-use Modules\User\Entities\User;
 class AuthController extends Controller
 {
 	use AuthenticatesUsers;
@@ -27,7 +24,7 @@ class AuthController extends Controller
             request()->request->add(['username' => request()->email]);
             request()->except(['email']);
         }
-
+dd($text);
         return $text;
     }
 
@@ -61,4 +58,5 @@ class AuthController extends Controller
 
     //     return $this->sendFailedLoginResponse($request);
     // }
+    
 }

@@ -13,8 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('website.index');
-// });
-
-Route::get('login', 'AuthController@getLogin')->name('web.homepage');
+Route::get('/', function () {
+    return view('website.index');
+});
