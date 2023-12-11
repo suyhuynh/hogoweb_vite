@@ -57,7 +57,6 @@
         <title>Web công nghệ | HoGoWeb</title>
     @endif
 
-    @vite(['resources/css/app.css', 'resources/assets/backend/app.js'])
     @stack('meta')
 </head>
 

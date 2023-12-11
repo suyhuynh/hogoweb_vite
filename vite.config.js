@@ -7,7 +7,6 @@ export default defineConfig({
     plugins: [
         inject({
             jQuery: "jquery",
-            require: "require",
             "window.jQuery": "jquery",
             $: "jquery",
             "window.moment": "moment"
@@ -15,10 +14,7 @@ export default defineConfig({
         laravel({
             input: ['resources/assets/backend/scss/app.scss', 'resources/assets/backend/app.js'],
             refresh: true,
-            publicDir: 'public/',
-            optimizeDeps: {
-                include: ['jQuery', '$'],
-            },
+            publicDir: 'public/'
         }),
     ],
 });
