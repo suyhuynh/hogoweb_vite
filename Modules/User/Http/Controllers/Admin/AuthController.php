@@ -24,7 +24,7 @@ class AuthController extends Controller
             request()->request->add(['username' => request()->email]);
             request()->except(['email']);
         }
-dd($text);
+
         return $text;
     }
 

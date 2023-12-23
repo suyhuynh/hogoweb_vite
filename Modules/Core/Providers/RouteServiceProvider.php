@@ -12,7 +12,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    protected $moduleNamespace = 'Modules\Core\Http\Controllers\Admin';
+    protected $moduleNamespace = 'Modules\Core\Http\Controllers';
 
     /**
      * Called before routes are registered.
@@ -47,7 +47,7 @@ class RouteServiceProvider extends ServiceProvider
      */
     protected function mapAdminRoutes()
     {
-        Route::prefix('tkadmin')
+        Route::prefix('kadmin')
             ->middleware('admin')
             ->namespace($this->moduleNamespace)
             ->group(module_path('Core', '/Routes/admin.php'));
@@ -64,7 +64,7 @@ class RouteServiceProvider extends ServiceProvider
     {
         Route::prefix('api')
             ->middleware('api')
-            ->namespace($this->moduleNamespace)
+            ->namespace($this->moduleNamespace. '\Api')
             ->group(module_path('Core', '/Routes/api.php'));
     }
 }

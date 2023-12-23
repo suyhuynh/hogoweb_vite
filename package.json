@@ -1,12 +1,14 @@
 {
     "private": false,
+    "type": "module",
     "scripts": {
         "dev": "vite",
         "predeploy": "npm run build",
-        "build": "vite build"
+        "build": "vite build --debug"
     },
     "devDependencies": {
         "axios": "^1.1.2",
+        "esbuild": "^0.19.9",
         "laravel-vite-plugin": "^0.7.2",
         "lodash": "^4.17.19",
         "postcss": "^8.1.14",

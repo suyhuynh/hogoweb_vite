@@ -17,9 +17,10 @@ class Role extends AppModel
         'updated_at',
         'created_at' 
     );
-    // protected $casts = [
-    //     'permissions' => 'array',
-    // ];
+    protected $casts = [
+        'permissions' => 'array',
+    ];
+
     protected static function boot() {
         parent::boot();
         static::saving(function (self $role) {

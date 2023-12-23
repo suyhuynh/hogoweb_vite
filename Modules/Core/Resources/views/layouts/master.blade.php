@@ -68,7 +68,7 @@
             <div class="pull-right hidden-xs">
                 <b>Version</b> 3.1.0
             </div>
-            <strong>Copyright &copy; 2023 <a href="https://kilala.vn">Suy Huỳnh Kilala</a>.</strong> All rights
+            <strong>Copyright &copy; 2023 <a href="https://kilala.vn">HoGoWeb</a>.</strong> All rights
             reserved.
         </footer>
 

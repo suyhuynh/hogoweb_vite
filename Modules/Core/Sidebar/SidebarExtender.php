@@ -5,7 +5,7 @@ namespace Modules\Core\Sidebar;
 use Maatwebsite\Sidebar\Item;
 use Maatwebsite\Sidebar\Menu;
 use Maatwebsite\Sidebar\Group;
-use Modules\App\Sidebar\BaseSidebarExtender;
+use Modules\Core\Sidebar\BaseSidebarExtender;
 
 class SidebarExtender extends BaseSidebarExtender
 {

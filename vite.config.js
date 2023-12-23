@@ -3,7 +3,7 @@ import laravel from 'laravel-vite-plugin';
 import inject from '@rollup/plugin-inject';
 
 export default defineConfig({
-    base: '',
+    base: 'public',
     plugins: [
         inject({
             jQuery: "jquery",
@@ -17,4 +17,5 @@ export default defineConfig({
             publicDir: 'public/'
         }),
     ],
+    
 });
