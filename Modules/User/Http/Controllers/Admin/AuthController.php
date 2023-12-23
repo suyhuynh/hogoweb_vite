@@ -24,7 +24,7 @@ class AuthController extends Controller
             request()->request->add(['username' => request()->email]);
             request()->except(['email']);
         }
-dd($text);
+
         return $text;
     }
 
@@ -35,8 +35,8 @@ dd($text);
         return $this->loggedOut($request) ?: redirect()->route('admin.login');
     }
 
-    // public function login(LoginRequest $request)
-    // {
+    public function login(LoginRequest $request)
+    {dd($request->all());
     //     if (method_exists($this, 'hasTooManyLoginAttempts') &&
     //         $this->hasTooManyLoginAttempts($request)) {
     //         $this->fireLockoutEvent($request);
@@ -57,6 +57,6 @@ dd($text);
     //     $this->incrementLoginAttempts($request);
 
     //     return $this->sendFailedLoginResponse($request);
-    // }
-    
+    }
+
 }
