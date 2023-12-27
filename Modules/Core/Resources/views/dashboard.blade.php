@@ -1,13 +1,13 @@
 @extends('core::layouts.master')
 
 @component('core::components.breadcrumb')
-@slot('title', trans('core::cores.sidebar.dashboard'))
-@slot('listBreadcrumb', [
-[
-'title' => trans('core::cores.sidebar.dashboard'),
-'route' => route('admin.dashboard.index')
-]
-])
+    @slot('title', trans('core::cores.sidebar.dashboard'))
+    @slot('listBreadcrumb', [
+        [
+            'title' => trans('core::cores.sidebar.dashboard'),
+            'route' => route('admin.dashboard.index')
+        ]
+    ])
 @endcomponent
 
 @section('content')
@@ -21,4 +21,5 @@
         @endforeach
     @endif
 </div>
+
 @endsection

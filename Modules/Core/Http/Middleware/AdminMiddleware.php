@@ -14,7 +14,7 @@ class AdminMiddleware
      */
     protected $except = [
         'admin.login',
-        'admin.get_login',
+        'admin.post_login',
         'admin.logout',
         'admin.reset.*',
         'admin.crawls.*'
