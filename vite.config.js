@@ -8,7 +8,6 @@ export default defineConfig({
         mainFields: [],
     },
     plugins: [
-        react(),
         inject({
             jQuery: "jquery",
             jquery: "jquery",
