@@ -133,7 +133,7 @@
 
 		<ul class="navbar-nav">
 			@if(get_config_by_key('language'))
-				@php
+				{{-- @php
 					$languages = languages();
 				@endphp
 				@if(count($languages))
@@ -153,7 +153,7 @@
 						@endif
 					</div>
 				</li>
-				@endif
+				@endif --}}
 			@endif
 
 			{{-- <li class="nav-item dropdown">

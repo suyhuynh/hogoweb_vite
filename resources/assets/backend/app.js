@@ -4,6 +4,7 @@ import './node_modules/vue';
 import './node_modules/lodash';
 import './node_modules/moment';
 window.moment = moment;
+import './node_modules/picker';
 
 import './node_modules/picker';
 import './node_modules/daterangepicker/daterangepicker.js';
