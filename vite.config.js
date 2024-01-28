@@ -7,16 +7,16 @@ export default defineConfig({
     resolve: {
         mainFields: [],
     },
-    define: {
-        global: {
-            jQuery: "jquery",
-            jquery: "jquery",
-            "window.jQuery": "jquery",
-            $: "jquery",
-            "window.moment": "moment",
-            moment: "moment",
-        },
-    },
+    // define: {
+    //     global: {
+    //         jQuery: "jquery",
+    //         jquery: "jquery",
+    //         "window.jQuery": "jquery",
+    //         $: "jquery",
+    //         "window.moment": "moment",
+    //         moment: "moment",
+    //     },
+    // },
     plugins: [
         // inject({
         //     jQuery: "jquery",
