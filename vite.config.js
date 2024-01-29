@@ -9,14 +9,14 @@ export default defineConfig({
         mainFields: [],
     },
     plugins: [
-        inject({
-            jQuery: "jquery",
-            jquery: "jquery",
-            "window.jQuery": "jquery",
-            $: "jquery",
-            "window.moment": "moment",
-            moment: "moment"
-        }),
+        // inject({
+        //     jQuery: "jquery",
+        //     jquery: "jquery",
+        //     "window.jQuery": "jquery",
+        //     $: "jquery",
+        //     "window.moment": "moment",
+        //     moment: "moment"
+        // }),
         vitePluginRequire.default(),
         laravel({
             input: ['resources/assets/backend/scss/app.scss', 'resources/assets/backend/app.js'],

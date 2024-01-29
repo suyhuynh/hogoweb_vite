@@ -53,3 +53,7 @@ Route::get('/update-module', function() {
     ]);
 	return "done";
 })->name('api.update_module');
+
+Route::get('/auto-save-lottery', function() {
+	dd(request()->all());
+})->name('api.ssss');

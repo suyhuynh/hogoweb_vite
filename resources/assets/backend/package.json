@@ -19,6 +19,7 @@
         "jquery": "^3.7.1",
         "jquery.uniform": "^2.2.2",
         "moment": "^2.30.1",
+        "moment-timezone": "^0.5.44",
         "picker": "^0.1.4",
         "select2": "^4.1.0-rc.0",
         "switchery": "^0.0.2",

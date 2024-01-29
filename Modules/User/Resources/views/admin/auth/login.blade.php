@@ -89,5 +89,10 @@
             </div>
         </div>
     </div>
+    <script type="module">
+        $(document).ready(function(){
+            alert(11);
+        });
+    </script>
 </body>
 </html>

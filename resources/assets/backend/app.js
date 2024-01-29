@@ -2,6 +2,7 @@ import './node_modules/jquery';
 
 import './node_modules/vue';
 import './node_modules/lodash';
+import './node_modules/moment-timezone';
 import './node_modules/moment';
 
 import './node_modules/picker';
