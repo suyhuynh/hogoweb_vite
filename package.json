@@ -16,6 +16,7 @@
     "dependencies": {
         "@rollup/plugin-inject": "^5.0.5",
         "compile-sass": "^2.0.0",
-        "require": "^2.4.20"
+        "require": "^2.4.20",
+        "vite-plugin-require": "^1.1.14"
     }
 }

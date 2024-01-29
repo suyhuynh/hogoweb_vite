@@ -9,9 +9,9 @@ import './node_modules/daterangepicker/daterangepicker.js';
 import './node_modules/select2';
 import './node_modules/tinymce';
 import './node_modules/jquery.uniform';
+import './node_modules/switchery';
 
 import './admin/app/js/plugins/forms/styling/uniform.min.js';
-import './admin/app/js/plugins/forms/styling/switchery.min.js';
 import './admin/app/js/plugins/forms/selects/bootstrap_multiselect.js';
 import './admin/app/js/main/bootstrap.bundle.min.js';
 import './admin/app/js/plugins/loaders/blockui.min.js';
