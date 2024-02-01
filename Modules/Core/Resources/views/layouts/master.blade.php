@@ -12,7 +12,7 @@
     <link href="{{ asset('admin/app/css/icons/fontawesome/styles.min.css') }}?v={{ visionApp() }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('admin/assets/css/bootstrap.min.css') }}?v={{ visionApp() }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('admin/assets/css/bootstrap_limitless.min.css') }}?v={{ visionApp() }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('public/admin/app/js/plugins/jquery-confirm/jquery-confirm.min.css') }}?v={{ visionApp() }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('admin/app/js/plugins/jquery-confirm/jquery-confirm.min.css') }}?v={{ visionApp() }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('admin/assets/css/animate.min.css') }}?v={{ visionApp() }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('admin/assets/css/layout.min.css') }}?v={{ visionApp() }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('admin/assets/css/components.min.css') }}?v={{ visionApp() }}" rel="stylesheet" type="text/css">
@@ -31,8 +31,8 @@
     <script type="text/javascript" src="{{ asset('admin/app/js/plugins/pickers/pickadate/picker.js') }}?v={{ visionApp() }}"></script>
     <script type="text/javascript" src="{{ asset('admin/app/js/plugins/forms/selects/select2.min.js') }}?v={{ visionApp() }}"></script>
     <script type="text/javascript" src="{{ asset('admin/app/js/plugins/forms/selects/bootstrap_multiselect.js') }}?v={{ visionApp() }}"></script>
-    <script type="text/javascript" src="{{ asset('public/admin/app/js/wysiwyg/tinymce.min.js') }}?v={{ visionApp() }}"></script>
-    <script type="text/javascript" src="{{ asset('public/admin/app/js/plugins/editors/ace/ace.js') }}?v={{ visionApp() }}"></script>
+    <script type="text/javascript" src="{{ asset('admin/app/js/wysiwyg/tinymce.min.js') }}?v={{ visionApp() }}"></script>
+    <script type="text/javascript" src="{{ asset('admin/app/js/plugins/editors/ace/ace.js') }}?v={{ visionApp() }}"></script>
     <script type="text/javascript" src="{{ asset('admin/assets/js/app.js') }}"></script>
     <style type="text/css" media="all">
         @-webkit-keyframes rotateInDownRight{
@@ -146,15 +146,18 @@
         </div>
 
     </div>
-    <script type="text/javascript" src="{{ asset('public/admin/app/cropper/cropper.min.js') }}?v={{ visionApp() }}"></script>
-    <script type="text/javascript" src="{{ env('APP_ENV') == 'producttion' ? asset('public/admin/vue/vue.min.js') : asset('public/admin/vue/vue.js') }}?v={{ visionApp() }}"></script>
-    <script type="text/javascript" src="{{ asset('public/admin/vue/lodash.js') }}?v={{ visionApp() }}"></script>
-    <script type="text/javascript" src="{{ asset('public/admin/app/js/plugins/notifications/bootstrap-notify.js') }}?v={{ visionApp() }}"></script>
-    <script type="text/javascript" src="{{ asset('public/admin/app/js/plugins/jquery-confirm/jquery-confirm.min.js') }}?v={{ visionApp() }}"></script>
+    <script type="text/javascript">
+        var current_currency = '';
+    </script>
+    <script type="text/javascript" src="{{ asset('admin/app/cropper/cropper.min.js') }}?v={{ visionApp() }}"></script>
+    <script type="text/javascript" src="{{ env('APP_ENV') == 'producttion' ? asset('admin/vue/vue.min.js') : asset('admin/vue/vue.js') }}?v={{ visionApp() }}"></script>
+    <script type="text/javascript" src="{{ asset('admin/vue/lodash.js') }}?v={{ visionApp() }}"></script>
+    <script type="text/javascript" src="{{ asset('admin/app/js/plugins/notifications/bootstrap-notify.js') }}?v={{ visionApp() }}"></script>
+    <script type="text/javascript" src="{{ asset('admin/app/js/plugins/jquery-confirm/jquery-confirm.min.js') }}?v={{ visionApp() }}"></script>
     <script src="{{ asset('admin/vue/color/vue-color.min.js') }}?v={{ visionApp() }}"></script>
-    <script type="text/javascript" src="{{ asset('public/admin/vue/components.js') }}?v={{ visionApp() }}"></script>
-    <script type="text/javascript" src="{{ asset('public/admin/vue/component_forms.js') }}?v={{ visionApp() }}?v={{ visionApp() }}"></script>
-    <script type="text/javascript" src="{{ asset('public/admin/vue/helper.js') }}?v={{ visionApp() }}"></script>
+    <script type="text/javascript" src="{{ asset('admin/vue/components.js') }}?v={{ visionApp() }}"></script>
+    <script type="text/javascript" src="{{ asset('admin/vue/component_forms.js') }}?v={{ visionApp() }}?v={{ visionApp() }}"></script>
+    <script type="text/javascript" src="{{ asset('admin/vue/helper.js') }}?v={{ visionApp() }}"></script>
     <script type="text/javascript">
         $(window).scroll(function() {
             if ($(this).scrollTop() > 20) {

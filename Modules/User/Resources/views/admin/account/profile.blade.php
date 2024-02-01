@@ -1,4 +1,4 @@
-@extends('app::admin.layouts.master')
+@extends('core::layouts.master')
 @section('content')
 <div class="row">
 	<div class="col-sx-12 col-sm-12 col-lg-10 col-md-8 offset-lg-1 offset-md-2">
@@ -77,7 +77,7 @@
 									</div>
 								</div>
 							</div>
-							@include('customer::admin.partials.passport_img')
+							
 							<div class="form-group">
 								<label>
 									{{ trans('user::users.form.general.note') }}
