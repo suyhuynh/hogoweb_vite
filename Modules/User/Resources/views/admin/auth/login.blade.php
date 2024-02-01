@@ -1,12 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta rel="noffoloe">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Admin 4.0</title>
-    @vite(['resources/assets/backend/scss/app.scss', 'resources/assets/backend/app.js'])
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1, user-scalable=yes" />
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
+    <link rel="shortcut icon" href="{{ asset('admin/assets/img/icon-hogo-web.ico') }}" />
+    <meta name="robots" content="noindex, nofollow">
+    <title>HoGoWeb Admin 4.0</title>
+    <link href="{{ asset('admin/assets/css/erp.css') }}" media="all" rel="stylesheet" type="text/css">
+    <link href="{{ asset('admin/app/css/icons/icomoon/styles.min.css') }}" media="all" rel="stylesheet" type="text/css">
+    <link href="{{ asset('admin/assets/css/bootstrap.min.css') }}" media="all" rel="stylesheet" type="text/css">
+    <link href="{{ asset('admin/assets/css/bootstrap_limitless.min.css') }}" media="all" rel="stylesheet" type="text/css">
+    <link href="{{ asset('admin/assets/css/layout.min.css') }}" media="all" rel="stylesheet" type="text/css">
+    <link href="{{ asset('admin/assets/css/components.min.css') }}" media="all" rel="stylesheet" type="text/css">
+    <link href="{{ asset('admin/assets/css/colors.min.css') }}" media="all" rel="stylesheet" type="text/css">
+
+    <script type="text/javascript" src="{{ asset('admin/app/js/main/jquery.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('admin/app/js/main/bootstrap.bundle.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('admin/app/js/plugins/loaders/blockui.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('admin/app/js/plugins/forms/styling/uniform.min.js') }}"></script>
+
+    <script type="text/javascript" src="{{ asset('admin/assets/js/app.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('admin/app/js/demo_pages/login.js') }}"></script>
 </head>
 <body>
     <div class="page-content">
@@ -67,8 +83,8 @@
                                     <i class="icon-circle-right2 ml-2"></i>
                                 </button>
                             </div>
-
-                            {{--< div class="form-group text-center text-muted content-divider">
+{{-- 
+                            <div div class="form-group text-center text-muted content-divider">
                                 <span class="px-2">{{ trans('user::users.login.sign_in_with') }}</span>
                             </div>
 
@@ -89,10 +105,5 @@
             </div>
         </div>
     </div>
-    <script type="module">
-        $(document).ready(function(){
-            alert(11);
-        });
-    </script>
 </body>
 </html>

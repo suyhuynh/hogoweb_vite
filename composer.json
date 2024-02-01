@@ -10,7 +10,7 @@
         "laravel/framework": "^9.19",
         "laravel/sanctum": "^3.0",
         "laravel/tinker": "^2.7",
-        "laravel/ui": "^4.2",
+        "laravel/ui": "^4.4",
         "maatwebsite/laravel-sidebar": "^2.5",
         "nwidart/laravel-modules": "^9.0",
         "yajra/laravel-datatables": "^9.0"

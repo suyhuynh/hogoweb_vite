@@ -18,6 +18,11 @@ Route::get('/', [
 	'uses' => 'Website\IndexController@index',
 ]);
 
+Route::post('/convert-url', [
+	'as' => 'convert.url',
+	'uses' => 'Website\IndexController@index',
+]);
+
 Route::get('default', [
 	'as' => 'web.default',
 	'uses' => 'Website\IndexController@default',
