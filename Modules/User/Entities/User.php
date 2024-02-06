@@ -40,12 +40,15 @@ class User extends FoundationAuthenticatable{
        
     ];
 
+    protected $dateFormat = 'd-m-Y';
+
     protected $hidden = [
         'password', 'remember_token',
     ];
+    // protected $dates = ['last_login', 'birthday'];
     protected $casts = [
         'is_receive_mail_from_sys' => 'boolean',
-        'email_verified_at' => 'datetime'
+        'email_verified_at' => 'datetime',
     ];
     protected $appends = ['short_name'];
     /**
@@ -53,7 +56,6 @@ class User extends FoundationAuthenticatable{
      *
      * @var array
      */
-    protected $dates = ['last_login', 'birthday'];
 
     public function childs() {
         return $this->hasMany('Modules\User\Entities\User', 'parent_id', 'id')->with('childs');
@@ -77,6 +79,10 @@ class User extends FoundationAuthenticatable{
             return array_fill_keys(explode(',', $role->permissions), true);
         } 
         return [];
+    }
+
+    public function getBirthdayAttribute() {
+        return !empty($this->birthday) ? date('d-m-Y', strtotime($this->birthday)) : date('d-m-Y'); 
     }
 
 

@@ -24,7 +24,7 @@ class Category extends Migration
             $table->integer('layout_id')->nullable();
             $table->integer('parent_id')->nullable();
             $table->unsignedInteger('order')->nullable()->default(0);
-            $table->tinyInteger('status')->default(1)->nullable();
+            $table->char('status')->nullable()->default('active');
             $table->string('author')->nullable();
             $table->integer('created_by')->nullable();
             $table->dateTime('published_at')->nullable();

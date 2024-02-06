@@ -12,16 +12,6 @@ return [
 		'sign_in' => 'Đăng nhập',
 		'sign_in_with' => 'Đăng nhập bằng',
 	],
-	'status' => [
-		-1 => 'Khóa',
-		1 => 'Đang hoạt động',
-	],
-	'roles' => [
-		'status' => [
-			-1 => 'Đã ẩn',
-			1 => 'Đã bật',
-		],
-	],
 	'table' => [
 		'list' => 'Danh sách nhân viên',
 		'user' => 'Nhân viên',
@@ -43,8 +33,8 @@ return [
 			'rose' => 'Quyền hạn',
 			'gender' => [
 				'title' => 'Giới tính',
-				1 => 'Nam',
-				2 => 'Nữ',
+				'male' => 'Nam',
+				'female' => 'Nữ',
 			],
 			'avatar' => 'Ảnh đại diện',
 			'cmnd_back' => 'CMND mặt sau',
@@ -72,6 +62,11 @@ return [
 		'position' => 'Chức vụ',
 		'attribute' => 'Thông tin thêm',
 	],
-	'user_has_been_deleted' => 'Tài khoản đã bị xóa', 
-	'do_not_have_account' => 'Không có tài khoản', 
+	'user_has_been_deleted' => 'Tài khoản đã bị xóa',
+	'do_not_have_account' => 'Không có tài khoản',
+	'status' => [
+        'active' => 'Đang hoạt động',
+        'inactive' => 'Ngừng hoạt động',
+        'locked' => 'Khóa',
+    ]
 ];

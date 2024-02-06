@@ -18,29 +18,13 @@ class AccountController extends Controller
     public function profile()
     {
         $profile = User::find(auth()->id());
+
         return view('user::admin.account.profile', ['profile' => $profile]);
     }
 
     public function updateProfile(Request $request)
     {
-        $input = $request->only(
-            'avatar',
-            'note',
-            'fullname',
-            'phone',
-            'passport',
-            'country_id',
-            'province_id',
-            'district_id',
-            'ward_id',
-            'address',
-            'gender',
-            'birthday',
-            'cmnd_back',
-            'cmnd_front',
-            'facebook',
-            'google'
-        );
+        $input = $this->filterData($request->all());
         $profile = User::where('id', auth()->id())->update($input);
         \Auth::loginUsingId(auth()->id());
         return response()->json(['success' => true, 'resource' => trans('attributes.update_success')]);
@@ -60,5 +44,20 @@ class AccountController extends Controller
     public function setting($id)
     {
         return view('user::admin.account.setting');
+    }
+
+    private function filterData($data) {
+        unset($data['_token']);
+        $newData = [];
+        foreach ($data as $key => $val) {
+            if (!empty($val)) {
+                if ($key == 'birthday') {
+                    $val = date('Y-m-d', strtotime($val));
+                }
+                $newData[$key] = $val;
+            }
+        }
+
+        return $newData;
     }
 }

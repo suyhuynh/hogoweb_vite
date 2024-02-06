@@ -12,16 +12,6 @@ return [
 		'sign_in' => 'ログイン',
 		'sign_in_with' => 'でサインイン',
 	],
-	'status' => [
-		-1 => '隠し',
-		1 => '有効',
-	],
-	'roles' => [
-		'status' => [
-			-1 => '隠し',
-			1 => '有効',
-		],
-	],
 	'table' => [
 		'list' => '従業員のリスト',
 		'user' => 'スタッフ',
@@ -43,8 +33,8 @@ return [
 			'rose' => '力',
 			'gender' => [
 				'title' => '性別',
-				1 => '男',
-				2 => '女',
+				'male' => '男',
+				'female' => '女',
 			],
 			'avatar' => 'アバター',
 			'cmnd_back' => 'IDカード裏面',
@@ -72,6 +62,11 @@ return [
 		'position' => '位置',
 		'attribute' => '詳細情報',
 	],
-	'user_has_been_deleted' => 'アカウントが削除されました', 
-	'do_not_have_account' => '口座がないのですか', 
+	'user_has_been_deleted' => 'アカウントが削除されました',
+	'do_not_have_account' => '口座がないのですか',
+	'status' => [
+        'active' => 'アクティブ',
+        'inactive' => '非アクティブ',
+        'locked' => 'ロックされた'
+    ]
 ];

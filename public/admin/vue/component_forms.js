@@ -2691,19 +2691,15 @@ Vue.component('form_datepicker', {
     template: `
     <div class="form-group">
     <label v-html="label+':'"></label>
-    <input type="text" v-model="val" class="form-control form-control-sm">
+    <input type="text" v-model="value" class="form-control form-control-sm">
     </div>`,
     props: ['label', 'value', 'format'],
-    data: function () {
-        return {
-            val: this.value
-        }
-    },
     methods: {
-        intall: function () {
+        intall: function (date) {
             var vm = this;
             var defaultdate = vm.$attrs.defaultdate;
             $(this.$el).daterangepicker({
+                startDate: date,
                 locale: {
                     format: defaultdate
                 },
@@ -2713,14 +2709,10 @@ Vue.component('form_datepicker', {
                 var startDate = moment(start.format(defaultdate), defaultdate);
                 vm.$emit('input',startDate._i);
             });
-        },
+        }
     },
-    mounted: function() {
-        var vm = this;
-        vm.intall(moment());
-    },
-    watch: {
-        val: function(newval, oldval) {
+    watch :{
+        value: function(newval, oldval) {
             var vm = this;
             if (newval != oldval) {
                 $(this.$el).data('daterangepicker').remove();
@@ -2728,7 +2720,13 @@ Vue.component('form_datepicker', {
             }
         },
     },
-    created: function () {        },
+    mounted: function() {
+        var vm = this;
+        vm.intall(vm.value ? vm.value : moment());
+    },
+    created: function () {
+
+    },
 });
 
 Vue.component('form_singledatepicker_time', {

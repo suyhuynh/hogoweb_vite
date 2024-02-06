@@ -185,5 +185,5 @@ return [
         'prioritize' => 'Ưu tiên'
     ],
     'back_to_home' => 'Trang chủ',
-    'publish_note'=>'Hẹn giờ đăng hoạt động khi là "bản nháp" + "đã tick"',
+    'publish_note'=>'Hẹn giờ đăng hoạt động khi là "bản nháp" + "đã tick"'
 ];

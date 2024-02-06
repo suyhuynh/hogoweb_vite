@@ -21,7 +21,7 @@ class GroupTypes extends Migration
             $table->integer('footer_id')->nullable()->default(0);
             $table->char('author')->nullable();
             $table->unsignedInteger('order')->nullable()->default(1);
-            $table->tinyInteger('status')->default(1)->nullable();
+            $table->char('status')->nullable()->default('active');
             $table->integer('created_by')->nullable();
             $table->datetime('published_at')->nullable();
             $table->timestamps();

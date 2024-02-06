@@ -187,6 +187,7 @@ if (! function_exists('get_payments')) {
 
 if (! function_exists('visionApp')) {
     function visionApp(){
+        return rand();
         return '1.0.3';
     }
 }

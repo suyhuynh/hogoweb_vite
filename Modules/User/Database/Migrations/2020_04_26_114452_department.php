@@ -19,7 +19,7 @@ class Department extends Migration
         $table->char('type')->nullable();
         $table->integer('parent_id')->nullable();
         $table->string('title')->nullable();
-        $table->tinyInteger('status')->default(1)->nullable();
+        $table->char('status')->nullable()->default('active');
         $table->integer('created_by')->nullable();
         $table->timestamps();
         $table->index(['id', 'created_at']);

@@ -20,7 +20,6 @@ class Media extends Migration
             $table->string('description')->nullable();
             $table->string('path')->nullable();
             $table->string('alias')->nullable();
-            $table->tinyInteger('status')->default(1)->nullable();
             $table->integer('created_by')->nullable();
             $table->timestamps();
         });

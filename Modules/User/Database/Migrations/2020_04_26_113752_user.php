@@ -23,7 +23,7 @@ class User extends Migration
             $table->date('birthday')->nullable();
             $table->string('password')->nullable();
             $table->text('remember_token')->nullable();
-            $table->tinyInteger('gender')->nullable();
+            $table->char('gender')->nullable();
 
             $table->integer('parent_id')->nullable();
             $table->integer('position_id')->nullable();
@@ -47,7 +47,7 @@ class User extends Migration
             $table->string('google')->nullable();
             $table->text('permissions')->nullable();
             $table->integer('is_receive_mail_from_sys')->default(0);
-            $table->tinyInteger('status')->default(1);
+            $table->char('status')->nullable()->default('active');
             $table->timestamps();
             $table->index(['id', 'created_at']);
         });

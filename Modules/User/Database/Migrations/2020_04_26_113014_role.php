@@ -32,11 +32,13 @@ class Role extends Migration
             'admin.users.edit',
             'admin.users.status',
             'admin.users.destroy',
+
             'admin.departments.index',
             'admin.departments.create',
             'admin.departments.edit',
             'admin.departments.status',
             'admin.departments.destroy',
+
             'admin.positions.index',
             'admin.positions.create',
             'admin.positions.create',
@@ -44,6 +46,7 @@ class Role extends Migration
             'admin.positions.edit',
             'admin.positions.status',
             'admin.positions.destroy',
+
             'admin.roles.index',
             'admin.roles.create',
             'admin.roles.edit',
@@ -56,11 +59,13 @@ class Role extends Migration
             'admin.medias.edit',
             'admin.medias.status',
             'admin.medias.destroy',
+
             'admin.categorys.index',
             'admin.categorys.create',
             'admin.categorys.edit',
             'admin.categorys.status',
             'admin.categorys.destroy',
+
             'admin.groups.index',
             'admin.groups.create',
             'admin.groups.edit',
@@ -68,6 +73,7 @@ class Role extends Migration
             'admin.groups.edit',
             'admin.groups.status',
             'admin.groups.destroy',
+
             'admin.group_types.index',
             'admin.group_types.create',
             'admin.group_types.edit',

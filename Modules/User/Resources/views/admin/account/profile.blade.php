@@ -62,18 +62,15 @@
 										<label>
 											{{ trans('user::users.form.general.gender.title') }} <code>*</code>
 										</label>
-										<select name="gender" v-model="form.gender" class="form-control">
-											<option value="1">{{ trans('user::users.form.general.gender.1') }}</option>
-											<option value="2">{{ trans('user::users.form.general.gender.2') }}</option>
-										</select>
+										<select2 allowclear v-model="form.gender" :options="genders" name="country" id="country" class="form-control form-control-sm" placeholder="{{ trans('attributes.select') }}" name="gender"></select2>
 									</div>
 								</div>
 								<div class="col-md-6 col-sm-6 col-xs-12">
 									<div class="form-group">
-										<label>
+										{{-- <label>
 											{{ trans('user::users.form.general.birthday') }} <code>*</code>
-										</label>
-										<datepicker id="birthday" v-model="form.birthday" required="required"></datepicker>
+										</label> --}}
+										<form_datepicker defaultdate="DD-MM-YYYY" label="{{ trans('user::users.form.general.birthday') }}" id="birthday" v-model="form.birthday" required="required"></form_datepicker>
 									</div>
 								</div>
 							</div>
@@ -87,7 +84,7 @@
 						</div>
 					</fieldset>
 
-					<fieldset>
+					{{-- <fieldset>
 						<legend class="font-weight-semibold text-uppercase font-size-sm">
 							<i class="icon-reading mr-2"></i>
 							{{ trans('user::users.form.info.title') }}
@@ -131,7 +128,7 @@
 								<select2 allowclear v-model="form.ward_id" :options="wards" name="ward" id="ward" class="form-control form-control-sm" placeholder="{{ trans('attributes.select') }}" name="parent"></select2>
 							</div>
 						</div>
-					</fieldset>
+					</fieldset> --}}
 				</form>
 			</div>
 			<div class="card-footer text-right">
@@ -151,10 +148,15 @@
 
 @push('script')
 <script type="text/javascript">
-	var profile = {!! json_encode($profile->only('avatar', 'note',	'fullname',	'phone', 'passport',	'country_id', 'province_id', 'district_id', 'ward_id', 'address', 'gender', 'birthday',	'cmnd_back', 'cmnd_front', 'facebook', 'google') ) !!};
+	var profile = {!! json_encode($profile->only('avatar', 'note',	'fullname',	'phone', 'passport', 'country_id', 'province_id', 'district_id', 'ward_id', 'address', 'gender', 'birthday',	'cmnd_back', 'cmnd_front', 'facebook', 'google') ) !!};
 	var only_user_id = {{ auth()->id() }};
 	var mix = {
 		data: {
+			genders: {
+				"": "{{ trans('attributes.select') }}",
+				"male": "{{ trans('user::users.form.general.gender.male') }}",
+				"female": "{{ trans('user::users.form.general.gender.female') }}",
+			},
 			form: {
 				avatar: '',
 				note: '',
@@ -167,7 +169,7 @@
 				ward_id: '',
 				address: '',
 				gender: '',
-				birthday: '',
+				birthday: '{{ date("d-m-Y") }}',
 				cmnd_back: '',
 				cmnd_front: '',
 				facebook: '',
